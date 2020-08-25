@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>Welcome To Yelp!</h1>
+  <h2>Select A Restaurant</h2>
+
+<div class="cards">
+<% @restaurants.each do |restaurant| %>
+<div class="card">
+  <h5 class="card-header"><%= restaurant.name %></h5>
+  <div class="card-body">
+    <h5 class="card-title"><%= restaurant.category.capitalize %></h5>
+    <p class="card-text"><%= restaurant.address %></p>
+    <a href="/restaurants/<%=restaurant.id%>" class="btn btn-dark">View More</a>
+  </div>
+</div>
+<% end %>
+</div>
+</div>
+
